@@ -1,6 +1,11 @@
+*.pyc
 /bin/
 /include/
 /lib/
 /local/
 /man/
-/static/*
+/static/admin/
+/static/grappelli/
+/static/olwidget/
+/static/taarifa_config/
+/static/uni_form/
