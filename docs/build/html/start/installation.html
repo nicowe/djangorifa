@@ -1,0 +1,183 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Installation &mdash; djangorifa 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="djangorifa 0.1 documentation" href="../index.html" />
+    <link rel="next" title="Configuration" href="settings.html" />
+    <link rel="prev" title="Welcome to djangorifa’s documentation!" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="settings.html" title="Configuration"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Welcome to djangorifa’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">djangorifa 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>This installation assumes you are slightly familiar with Python and Django. However, not much prior knowledge of either is required. The entire git repo contains all the Python packages bundled in a virtualenv. If you wish to download only the source, the following components are required (different versions may or may not work):</p>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://www.python.org">Python</a> 2.6+</li>
+<li><a class="reference external" href="http://www.postgresql.org/">postgresql</a> 9.1.4</li>
+<li><a class="reference external" href="http://postgis.refractions.net/">postgis</a> 1.5.3</li>
+<li><a class="reference external" href="http://www.rabbitmq.com/">RabbitMQ</a> 2.5.0</li>
+<li><a class="reference external" href="http://initd.org/psycopg/">psycopg2</a> 2.4.5</li>
+<li><a class="reference external" href="http://www.djangoproject.com">Django</a> 1.4</li>
+<li><a class="reference external" href="http://south.aeracode.org/">South</a> 0.76</li>
+<li><a class="reference external" href="https://github.com/sehmaschine/django-grappelli/">django-grappelli</a> 2.4.0</li>
+<li><a class="reference external" href="http://celeryproject.org/">Celery</a> 3.0.5</li>
+<li><a class="reference external" href="https://github.com/celery/django-celery">django-celery</a> 3.0.4</li>
+<li><a class="reference external" href="http://code.google.com/p/django-mailer/">django-mailer</a> 0.1.0</li>
+<li><a class="reference external" href="https://bitbucket.org/ubernostrum/django-registration/">django-registration</a> 0.8.0</li>
+<li><a class="reference external" href="https://github.com/django-extensions/django-extensions">django-extensions</a> 0.9</li>
+<li><a class="reference external" href="https://github.com/subsume/django-filter-actually-maintained">django-filter-actually-maintained</a> (version unknown)</li>
+<li><a class="reference external" href="https://github.com/jbalogh/django-nose/">django_nose</a> 1.1.0</li>
+<li><a class="reference external" href="https://github.com/gregmuellegger/django-mobile">django_mobile</a> 0.2.3</li>
+<li><a class="reference external" href="https://github.com/maraujop/django-crispy-forms/">django-crispy-forms</a> 1.2.0</li>
+<li><a class="reference external" href="https://github.com/coleifer/django-generic-m2m">django-generic-m2m</a> (version unknown)</li>
+<li><a class="reference external" href="https://github.com/stefanfoulis/django-sendsms">django-sendsms</a> 0.2.2</li>
+</ul>
+<div class="section" id="all-systems">
+<h3>All Systems<a class="headerlink" href="#all-systems" title="Permalink to this headline">¶</a></h3>
+<p>The Django settings file can be found at djangorifa/config/settings.py. At the top of this file is a python dictionary with database settings. In the password field it says &#8216;change&#8217;. It is recommended you do as the settings say and change the string written there. There is no need to do anything else for installation - the automatic installation script will take care of setting up the database and everything else. Please see below for specific installation instructions for your platform.</p>
+<p>Install <a class="reference external" href="http://www.rabbitmq.com/">RabbitMQ</a>.</p>
+</div>
+<div class="section" id="on-ubuntu">
+<h3>On Ubuntu<a class="headerlink" href="#on-ubuntu" title="Permalink to this headline">¶</a></h3>
+<p>This installation assumes you have already installed postgresql and postgis. For detailed instructions on how to do this, look at the Django reference <a class="reference external" href="https://docs.djangoproject.com/en/dev/ref/contrib/gis/install/#ubuntu">https://docs.djangoproject.com/en/dev/ref/contrib/gis/install/#ubuntu</a>.</p>
+<p>There is a script in djangorifa called install_djangorifa.sh. This script will create the template_postgis template if it doesn&#8217;t already exist and a postgresql user (or role) called djangorifa. The script will prompt you to enter a password for the role and to confirm it. The password you enter <strong>must</strong> be the same as the database password in the settings file, or the installation will fail.</p>
+<p>Once the user is created, a database will be created also named djangorifa. The script will then use the pip script at djangorifa/bin/python to install django-celery and psycopg2. These are not included in the virtualenv because they require compilation. The script will then use djangorifa/bin/python to syncdb &#8211;all (django command) and then migrate &#8211;fake (south command) to set up the database. This will prompt for an admin username and password for administrative control of the website.</p>
+<p>Before running this script, ensure you are logged in as a user with full database control. The default method for this is:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo su - postgres
+</pre></div>
+</div>
+<p>The script assumes a PostGIS version installed of 1.5 if this is different, when running the script you can optionally specify which version number. To run the script:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>chmod 777 install_djangorifa.sh
+<span class="nv">$ </span>./install_djangorifa.sh <span class="o">[</span>1.5<span class="o">]</span>
+</pre></div>
+</div>
+<p>The script does no checking for whether or not the version of PostGIS is correct, so run incorrectly at your peril.</p>
+<p>The default database and username for postgresql can be changed. They are variables at the top of the script (DATABASE_NAME and DATABASE_USER).</p>
+</div>
+<div class="section" id="on-mac">
+<h3>On Mac<a class="headerlink" href="#on-mac" title="Permalink to this headline">¶</a></h3>
+<p>This installation assumes you have already installed postgresql and postgis. For detailed instructions on how to do this, look at the Django reference <a class="reference external" href="https://docs.djangoproject.com/en/dev/ref/contrib/gis/install/#macosx">https://docs.djangoproject.com/en/dev/ref/contrib/gis/install/#macosx</a>.</p>
+<p>I assume that the script runs virtually the same for a Mac user as a Linux user, but not having a Mac I cannot test this.</p>
+</div>
+<div class="section" id="on-windows">
+<h3>On Windows<a class="headerlink" href="#on-windows" title="Permalink to this headline">¶</a></h3>
+<p>Yeah. Change OS.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Installation</a><ul>
+<li><a class="reference internal" href="#requirements">Requirements</a><ul>
+<li><a class="reference internal" href="#all-systems">All Systems</a></li>
+<li><a class="reference internal" href="#on-ubuntu">On Ubuntu</a></li>
+<li><a class="reference internal" href="#on-mac">On Mac</a></li>
+<li><a class="reference internal" href="#on-windows">On Windows</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../index.html"
+                        title="previous chapter">Welcome to djangorifa&#8217;s documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="settings.html"
+                        title="next chapter">Configuration</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/start/installation.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="settings.html" title="Configuration"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Welcome to djangorifa’s documentation!"
+             >previous</a> |</li>
+        <li><a href="../index.html">djangorifa 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Caroline Glassberg-Powell.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
