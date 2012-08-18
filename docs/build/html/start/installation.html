@@ -27,7 +27,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="djangorifa 0.1 documentation" href="../index.html" />
-    <link rel="next" title="Configuration" href="settings.html" />
+    <link rel="next" title="Settings" href="settings.html" />
     <link rel="prev" title="Welcome to djangorifa’s documentation!" href="../index.html" /> 
   </head>
   <body>
@@ -38,7 +38,7 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="settings.html" title="Configuration"
+          <a href="settings.html" title="Settings"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="../index.html" title="Welcome to djangorifa’s documentation!"
@@ -54,7 +54,7 @@
             
   <div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
-<p>This installation assumes you are slightly familiar with Python and Django. However, not much prior knowledge of either is required. The entire git repo contains all the Python packages bundled in a virtualenv. If you wish to download only the source, the following components are required (different versions may or may not work):</p>
+<p>This installation assumes you are slightly familiar with Django and Python. There is an install script in the root directory of the download. This will automatically install the requirements listed below (although version numbers may be wrong if this is installed after a version upgrade). In order to run this script, please read the information provided below specific for your operating system.</p>
 <div class="section" id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -66,12 +66,12 @@
 <li><a class="reference external" href="http://www.djangoproject.com">Django</a> 1.4</li>
 <li><a class="reference external" href="http://south.aeracode.org/">South</a> 0.76</li>
 <li><a class="reference external" href="https://github.com/sehmaschine/django-grappelli/">django-grappelli</a> 2.4.0</li>
+<li><a class="reference external" href="https://github.com/ojii/django-sekizai/">django-sekizai</a> 0.6.1</li>
 <li><a class="reference external" href="http://celeryproject.org/">Celery</a> 3.0.5</li>
 <li><a class="reference external" href="https://github.com/celery/django-celery">django-celery</a> 3.0.4</li>
 <li><a class="reference external" href="http://code.google.com/p/django-mailer/">django-mailer</a> 0.1.0</li>
 <li><a class="reference external" href="https://bitbucket.org/ubernostrum/django-registration/">django-registration</a> 0.8.0</li>
 <li><a class="reference external" href="https://github.com/django-extensions/django-extensions">django-extensions</a> 0.9</li>
-<li><a class="reference external" href="https://github.com/subsume/django-filter-actually-maintained">django-filter-actually-maintained</a> (version unknown)</li>
 <li><a class="reference external" href="https://github.com/jbalogh/django-nose/">django_nose</a> 1.1.0</li>
 <li><a class="reference external" href="https://github.com/gregmuellegger/django-mobile">django_mobile</a> 0.2.3</li>
 <li><a class="reference external" href="https://github.com/maraujop/django-crispy-forms/">django-crispy-forms</a> 1.2.0</li>
@@ -80,6 +80,7 @@
 </ul>
 <div class="section" id="all-systems">
 <h3>All Systems<a class="headerlink" href="#all-systems" title="Permalink to this headline">¶</a></h3>
+<p>The installation script assumes you are working in a virtualenv. Therefore, create a virtualenv. Clone the git repo and move the <tt class="docutils literal"><span class="pre">djangorifa</span></tt> and <tt class="docutils literal"><span class="pre">docs</span></tt> folders into this virtualenv.</p>
 <p>The Django settings file can be found at djangorifa/config/settings.py. At the top of this file is a python dictionary with database settings. In the password field it says &#8216;change&#8217;. It is recommended you do as the settings say and change the string written there. There is no need to do anything else for installation - the automatic installation script will take care of setting up the database and everything else. Please see below for specific installation instructions for your platform.</p>
 <p>Install <a class="reference external" href="http://www.rabbitmq.com/">RabbitMQ</a>.</p>
 </div>
@@ -137,7 +138,7 @@
                         title="previous chapter">Welcome to djangorifa&#8217;s documentation!</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="settings.html"
-                        title="next chapter">Configuration</a></p>
+                        title="next chapter">Settings</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="../_sources/start/installation.txt"
@@ -167,7 +168,7 @@
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="settings.html" title="Configuration"
+          <a href="settings.html" title="Settings"
              >next</a> |</li>
         <li class="right" >
           <a href="../index.html" title="Welcome to djangorifa’s documentation!"

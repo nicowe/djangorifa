@@ -1,6 +1,6 @@
-#############
-Configuration
-#############
+########
+Settings
+########
 
 There are a few settings which are used by the system which also need to be configured. These can be set in the config/settings.py. Settings in that file not covered in this guide are covered in detail by Django https://docs.djangoproject.com/en/dev/topics/settings/.
 

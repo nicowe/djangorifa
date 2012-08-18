@@ -2,7 +2,7 @@
 Installation
 ############
 
-This installation assumes you are slightly familiar with Python and Django. However, not much prior knowledge of either is required. The entire git repo contains all the Python packages bundled in a virtualenv. If you wish to download only the source, the following components are required (different versions may or may not work):
+This installation assumes you are slightly familiar with Django and Python. There is an install script in the root directory of the download. This will automatically install the requirements listed below (although version numbers may be wrong if this is installed after a version upgrade). In order to run this script, please read the information provided below specific for your operating system. 
 
 ************
 Requirements
@@ -15,12 +15,12 @@ Requirements
 * `Django`_ 1.4
 * `South`_ 0.76
 * `django-grappelli`_ 2.4.0
+* `django-sekizai`_ 0.6.1
 * `Celery`_ 3.0.5
 * `django-celery`_ 3.0.4
 * `django-mailer`_ 0.1.0
 * `django-registration`_ 0.8.0
 * `django-extensions`_ 0.9
-* `django-filter-actually-maintained`_ (version unknown)
 * `django_nose`_ 1.1.0
 * `django_mobile`_ 0.2.3
 * `django-crispy-forms`_ 1.2.0
@@ -29,6 +29,8 @@ Requirements
 
 All Systems
 ===========
+The installation script assumes you are working in a virtualenv. Therefore, create a virtualenv. Clone the git repo and move the ``djangorifa`` and ``docs`` folders into this virtualenv.
+
 The Django settings file can be found at djangorifa/config/settings.py. At the top of this file is a python dictionary with database settings. In the password field it says 'change'. It is recommended you do as the settings say and change the string written there. There is no need to do anything else for installation - the automatic installation script will take care of setting up the database and everything else. Please see below for specific installation instructions for your platform.
 
 Install `RabbitMQ`_.
@@ -75,6 +77,7 @@ Yeah. Change OS.
 .. _psycopg2: http://initd.org/psycopg/
 .. _Django: http://www.djangoproject.com
 .. _South: http://south.aeracode.org/
+.. _django-sekizai: https://github.com/ojii/django-sekizai/
 .. _django-grappelli: https://github.com/sehmaschine/django-grappelli/
 .. _Celery: http://celeryproject.org/
 .. _django-celery: https://github.com/celery/django-celery
